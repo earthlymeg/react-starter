@@ -2,24 +2,16 @@ import React from 'react';
 
 
 var MovieList = (props) => {
-  console.log('movielist props', props);
+  //console.log('movielist props, check for change watched text', props);
 
-  return(
-    <div>
-      <li>{props.movies[0].title}</li>
-      <br></br>
-      <li>{props.movies[1].title}</li>
-      <br></br>
-      {/* <li>{props.movies[2].title}</li>
-      <br></br>
-      <li>{props.movies[3].title}</li>
-      <br></br>
-      <li>{props.movies[4].title}</li> */}
-    </div>
+  return (
+  props.movies.map( (movie) => 
+  <div className="movieTitle">
+    {movie.title}
+  <button className='watched-button' onClick={props.handleWatchedClick(movie)}>{/* if movie.isWatched = false, make this text = 'Not Watched'*/ }</button>
+    </div>)
   );
-  };
 
-
-
+}
 export default MovieList;
 

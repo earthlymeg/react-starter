@@ -1,10 +1,12 @@
 import React from 'react';
 
 var SearchBar = (props) => {
-console.log('props from search bar', props)
   return(
     <div className='field'>
-      <input type='text'  onChange={props.handleSearchEvent}/>  
+      <input type='text' 
+      value={props.valueOfSearchBox} onChange={props.handleSearchEvent} 
+  
+      /> 
     </div>
   )
 
@@ -13,4 +15,3 @@ console.log('props from search bar', props)
 
 export default SearchBar;
 
-//onChange={props.handleSearchEvent}
